@@ -1,0 +1,46 @@
+--------------------------------------
+Running PBS prologue script
+--------------------------------------
+User and Job Data:
+--------------------------------------
+Job ID:    490492.qb3
+Username:  jpacheco
+Group:     loniusers
+Date:      10-May-2018 08:54
+Node:      qb080 (2269)
+--------------------------------------
+PBS has allocated the following nodes:
+
+qb080
+
+A total of 20 processors on 1 nodes allocated
+---------------------------------------------
+Check nodes and clean them of stray processes
+---------------------------------------------
+Checking node qb080 08:54:35 
+Done clearing all the allocated nodes
+------------------------------------------------------
+Concluding PBS prologue script - 10-May-2018 08:54:35
+------------------------------------------------------
+sambamba-sort: Cannot open or create file 'sorted.bam' : No such file or directory
+------------------------------------------------------
+Running PBS epilogue script    - 10-May-2018 08:54:36
+------------------------------------------------------
+Checking node qb080 (MS)
+Checking node qb080 ok
+------------------------------------------------------
+Concluding PBS epilogue script - 10-May-2018 08:54:38
+------------------------------------------------------
+Exit Status:     1
+Job ID:          490492.qb3
+Username:        jpacheco
+Group:           loniusers
+Job Name:        sam_to_bam
+Session Id:      2268
+Resource Limits: ncpus=1,neednodes=1:ppn=20,nodes=1:ppn=20,walltime=12:00:00
+Resources Used:  cput=00:00:00,mem=0kb,vmem=0kb,walltime=00:00:02
+Queue Used:      workq
+Account String:  loni_selu_gt
+Node:            qb080
+Process id:      2909
+------------------------------------------------------

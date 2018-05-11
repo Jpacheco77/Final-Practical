@@ -1,0 +1,146 @@
+--------------------------------------
+Running PBS prologue script
+--------------------------------------
+User and Job Data:
+--------------------------------------
+Job ID:    491391.qb3
+Username:  jpacheco
+Group:     loniusers
+Date:      11-May-2018 12:47
+Node:      qb046 (82020)
+--------------------------------------
+PBS has allocated the following nodes:
+
+qb046
+
+A total of 20 processors on 1 nodes allocated
+---------------------------------------------
+Check nodes and clean them of stray processes
+---------------------------------------------
+Checking node qb046 12:47:16 
+Done clearing all the allocated nodes
+------------------------------------------------------
+Concluding PBS prologue script - 11-May-2018 12:47:16
+------------------------------------------------------
+WARNING	An augustus species is mentioned in the config file, dataset default species (human) will be ignored
+INFO	****************** Start a BUSCO 3.0.2 analysis, current time: 05/11/2018 12:47:16 ******************
+INFO	Configuration loaded from /work/jpacheco/busco/scripts/../config/config.ini
+INFO	Init tools...
+INFO	Check dependencies...
+INFO	Check input file...
+INFO	To reproduce this run: python /work/jpacheco/busco/scripts/run_BUSCO.py -i /work/jpacheco/pacheco_finalpractical/output/pilon.fasta -o busco_analysis_improved -l /work/jpacheco/pacheco_finalpractical/actinopterygii_odb9/ -m genome -c 20 -sp zebrafish
+INFO	Mode is: genome
+INFO	The lineage dataset is: actinopterygii_odb9 (eukaryota)
+INFO	Temp directory is ./tmp/
+INFO	****** Phase 1 of 2, initial predictions ******
+INFO	****** Step 1/3, current time: 05/11/2018 12:47:27 ******
+INFO	Create blast database...
+INFO	[makeblastdb]	Building a new DB, current time: 05/11/2018 12:47:34
+INFO	[makeblastdb]	New DB name:   /home/jpacheco/tmp/busco_analysis_improved_1489748153
+INFO	[makeblastdb]	New DB title:  /work/jpacheco/pacheco_finalpractical/output/pilon.fasta
+INFO	[makeblastdb]	Sequence type: Nucleotide
+INFO	[makeblastdb]	Keep Linkouts: T
+INFO	[makeblastdb]	Keep MBits: T
+INFO	[makeblastdb]	Maximum file size: 1000000000B
+INFO	[makeblastdb]	Adding sequences from FASTA; added 6404 sequences in 14.2435 seconds.
+INFO	[makeblastdb]	1 of 1 task(s) completed at 05/11/2018 12:47:51
+INFO	Running tblastn, writing output to /home/jpacheco/run_busco_analysis_improved/blast_output/tblastn_busco_analysis_improved.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 05/11/2018 13:13:03
+INFO	****** Step 2/3, current time: 05/11/2018 13:13:03 ******
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Running Augustus prediction using zebrafish as species:
+INFO	[augustus]	Please find all logs related to Augustus errors here: /home/jpacheco/run_busco_analysis_improved/augustus_output/augustus.log
+INFO	[augustus]	691 of 6902 task(s) completed at 05/11/2018 13:29:53
+INFO	[augustus]	1381 of 6902 task(s) completed at 05/11/2018 13:48:40
+INFO	[augustus]	2071 of 6902 task(s) completed at 05/11/2018 14:04:55
+INFO	[augustus]	2761 of 6902 task(s) completed at 05/11/2018 14:21:40
+INFO	[augustus]	3452 of 6902 task(s) completed at 05/11/2018 14:35:26
+INFO	[augustus]	4142 of 6902 task(s) completed at 05/11/2018 14:48:12
+INFO	[augustus]	4832 of 6902 task(s) completed at 05/11/2018 15:02:52
+INFO	[augustus]	5522 of 6902 task(s) completed at 05/11/2018 15:16:22
+INFO	[augustus]	6212 of 6902 task(s) completed at 05/11/2018 15:29:16
+INFO	[augustus]	6902 of 6902 task(s) completed at 05/11/2018 15:45:59
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 05/11/2018 15:46:57 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	691 of 6901 task(s) completed at 05/11/2018 15:47:04
+INFO	[hmmsearch]	2761 of 6901 task(s) completed at 05/11/2018 15:47:11
+INFO	[hmmsearch]	3451 of 6901 task(s) completed at 05/11/2018 15:47:12
+INFO	[hmmsearch]	4831 of 6901 task(s) completed at 05/11/2018 15:47:15
+INFO	[hmmsearch]	6901 of 6901 task(s) completed at 05/11/2018 15:47:19
+INFO	Results:
+INFO	C:95.1%[S:92.0%,D:3.1%],F:2.7%,M:2.2%,n:4584
+INFO	4360 Complete BUSCOs (C)
+INFO	4218 Complete and single-copy BUSCOs (S)
+INFO	142 Complete and duplicated BUSCOs (D)
+INFO	125 Fragmented BUSCOs (F)
+INFO	99 Missing BUSCOs (M)
+INFO	4584 Total BUSCO groups searched
+INFO	****** Phase 2 of 2, predictions using species specific training ******
+INFO	****** Step 1/3, current time: 05/11/2018 15:47:22 ******
+INFO	Extracting missing and fragmented buscos from the ancestral_variants file...
+INFO	Running tblastn, writing output to /home/jpacheco/run_busco_analysis_improved/blast_output/tblastn_busco_analysis_improved_missing_and_frag_rerun.tsv...
+INFO	[tblastn]	1 of 1 task(s) completed at 05/11/2018 16:01:09
+INFO	Maximum number of candidate contig per BUSCO limited to: 3
+INFO	Getting coordinates for candidate regions...
+INFO	****** Step 2/3, current time: 05/11/2018 16:01:12 ******
+INFO	Training Augustus using Single-Copy Complete BUSCOs:
+INFO	Converting predicted genes to short genbank files at 05/11/2018 16:01:12...
+INFO	All files converted to short genbank files, now running the training scripts at 05/11/2018 16:25:04...
+INFO	Pre-Augustus scaffold extraction...
+INFO	Re-running Augustus with the new metaparameters, number of target BUSCOs: 224
+INFO	[augustus]	43 of 423 task(s) completed at 05/11/2018 16:26:12
+INFO	[augustus]	85 of 423 task(s) completed at 05/11/2018 16:26:40
+INFO	[augustus]	127 of 423 task(s) completed at 05/11/2018 16:27:10
+INFO	[augustus]	170 of 423 task(s) completed at 05/11/2018 16:27:48
+INFO	[augustus]	212 of 423 task(s) completed at 05/11/2018 16:28:32
+INFO	[augustus]	254 of 423 task(s) completed at 05/11/2018 16:29:01
+INFO	[augustus]	297 of 423 task(s) completed at 05/11/2018 16:29:29
+INFO	[augustus]	339 of 423 task(s) completed at 05/11/2018 16:30:01
+INFO	[augustus]	381 of 423 task(s) completed at 05/11/2018 16:30:34
+INFO	[augustus]	423 of 423 task(s) completed at 05/11/2018 16:32:42
+INFO	Extracting predicted proteins...
+INFO	****** Step 3/3, current time: 05/11/2018 16:32:45 ******
+INFO	Running HMMER to confirm orthology of predicted proteins:
+INFO	[hmmsearch]	43 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	170 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	212 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	254 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	297 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	339 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	[hmmsearch]	423 of 423 task(s) completed at 05/11/2018 16:32:46
+INFO	Results:
+INFO	C:96.4%[S:93.2%,D:3.2%],F:1.4%,M:2.2%,n:4584
+INFO	4420 Complete BUSCOs (C)
+INFO	4274 Complete and single-copy BUSCOs (S)
+INFO	146 Complete and duplicated BUSCOs (D)
+INFO	62 Fragmented BUSCOs (F)
+INFO	102 Missing BUSCOs (M)
+INFO	4584 Total BUSCO groups searched
+INFO	BUSCO analysis done with WARNING(s). Total running time: 13538.2268491 seconds
+INFO	Results written in /home/jpacheco/run_busco_analysis_improved/
+
+------------------------------------------------------
+Running PBS epilogue script    - 11-May-2018 16:32:55
+------------------------------------------------------
+Checking node qb046 (MS)
+Checking node qb046 ok
+------------------------------------------------------
+Concluding PBS epilogue script - 11-May-2018 16:32:56
+------------------------------------------------------
+Exit Status:     0
+Job ID:          491391.qb3
+Username:        jpacheco
+Group:           loniusers
+Job Name:        busco_imp
+Session Id:      82019
+Resource Limits: ncpus=1,neednodes=1:ppn=20,nodes=1:ppn=20,walltime=12:00:00
+Resources Used:  cput=69:25:24,mem=27630248kb,vmem=29713104kb,walltime=03:45:41
+Queue Used:      workq
+Account String:  loni_selu_gt
+Node:            qb046
+Process id:      38047
+Last status:     11-May-2018:16:01 PBS_job=491391.qb3 user=jpacheco allocation=loni_selu_gt queue=workq total_load=19.99 cpu_hours=0.58 wall_hours=2.33 unused_nodes=0 total_nodes=1 ppn=20 avg_load=19.99 avg_cpu=1897% avg_mem=13743mb avg_vmem=15755mb top_proc=jpacheco:augustus:qb046:1.5G:1.5G:0.0hr:99% toppm=jpacheco:augustus:qb046:2097M:2080M node_processes=23 avg_avail_mem=61611mb min_avail_mem=61611mb reverified_avg_load=14.67
+------------------------------------------------------
